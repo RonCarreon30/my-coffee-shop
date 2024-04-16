@@ -28,9 +28,10 @@
   </div>
   
   <div class="bttn-container">
-    <ion-button expand="block" (click)="verifyCode()">Next</ion-button>
-    <ion-button expand="block" fill="outline" [disabled]="timer > 0" (click)="resendCode()">Resend</ion-button>
+    <ion-button class="login-bttn" expand="block" (click)="verifyCode()">Next</ion-button>
+    <ion-button class="resend-bttn" expand="block" fill="outline" [disabled]="timer > 0" (click)="resendCode()">Resend</ion-button>
   </div>
+  
 </ion-content>
 
 <!--Show this after verifying code-->
@@ -54,7 +55,7 @@
 
 
   <div class="bttn-container">
-    <ion-button expand="block" (click)="resetPass()">Login</ion-button>
+    <ion-button class="login-bttn" expand="block" (click)="resetPass()">Login</ion-button>
   </div>
 </ion-content>
 

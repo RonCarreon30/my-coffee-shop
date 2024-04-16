@@ -55,8 +55,14 @@ ion-content {
     margin: 20% 0% 10% 10%;
   }
 
-  .bttn-container ion-button{
+  .login-bttn{
     margin: 5% 0 0 0;
+    --background: #884a39;
+  }
+
+  .resend-bttn{
+    --border-color: #884a39;
+    color: #884a39;
   }
 
   .new-pw-container {

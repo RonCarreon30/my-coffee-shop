@@ -52,7 +52,13 @@ ion-content {
 }
 
 .login-bttn{
-  margin-top:15%
+  margin-top:15%;
+  --background: #884A39;
+}
+
+.login-bttn ion-activated{
+  --background: #884A39;
+  color:#d3745a;
 }
 
 .or-divider {

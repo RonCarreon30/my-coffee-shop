@@ -1,0 +1,117 @@
+ion-content {
+  --background: linear-gradient(0deg,rgba(97, 97, 97, 0.589), rgba(0,0,0,0.1)), url("/assets/landingBg.png") no-repeat center center / cover;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  margin-top: 5%;
+}
+.image-class {
+  width: 60%;
+}
+.greeting-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 20%;
+}
+@font-face {
+  font-family: 'DarkerGrotesque';
+  src: url('/assets/fonts/webfont/DarkerGrotesque-Bold.woff') format('woff');
+}
+
+.greeting-container h1{
+  font-family: 'DarkerGrotesque';
+  font-size: xx-large;
+  margin: 0;
+  padding: 0;
+}
+.greeting-container p {
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+  font-family: 'DarkerGrotesque', sans-serif; 
+  font-size: large;
+}
+
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70%;
+}
+
+.login-options {
+  width: 100%;
+  max-width: 300px; /* Optional: Adjust the maximum width as needed */
+}
+
+.login-bttn{
+  margin-top:15%
+}
+
+.or-divider {
+  margin: 10px 0;
+  text-align: end;
+  line-height: 0.1em;
+  margin-bottom: 10px;
+}
+
+.or-divider a{
+
+  padding: 0 10px;
+  color: #FFFFFF;
+}
+
+.other-divider {
+  margin: 10px 0;
+  text-align: center;
+  line-height: 0.1em;
+  margin-bottom: 10px;
+  padding: 0 10px;
+  color: #888;
+  margin-top: 15%;
+}
+
+.sign-up-text {
+  margin: 10px 0;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #888;
+}
+
+.sign-up-text a{
+  padding: 0 2px;
+  color: #FFFFFF;
+}
+
+.login-icons-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+}
+
+
+.ios .custom-input {
+  border: 2px solid #ced4da; /* or any color you prefer */
+  border-radius: 10px; /* optional: add border radius */
+  margin-top: 5%;
+  padding: 7px;
+}
+
+  
+
+

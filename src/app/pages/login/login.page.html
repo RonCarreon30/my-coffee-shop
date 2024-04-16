@@ -1,0 +1,56 @@
+<ion-header translucent>
+  <ion-toolbar class="transparent-toolbar">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/landing']">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-margin" [fullscreen]="true" >
+  <div class="logo">
+    <img class="image-class" src="/assets/logo.png"/>
+  </div>
+  
+  <div class="greeting-container">
+    <h1>WELCOME BACK!</h1>
+    <p>We've met again</p>
+  </div>
+
+  <div class="login-container">
+    <div class="login-options">
+      <div class="custom-input">
+        <ion-input fill="outline" type="email" placeholder="Email" id="emailInput"></ion-input>  
+      </div>
+      <div class="custom-input">
+        <ion-input fill="outline" type="password" placeholder="Password" id="passwordInput"></ion-input>
+      </div>    
+
+      <div class="or-divider">
+        <a [routerLink]="['/reset-password']">Forgot Password?</a>
+      </div>
+      
+      <ion-button class=" login-bttn" expand="block" (click)="login()">
+        Log In
+      </ion-button>
+
+      <div class="other-divider">
+        <ion-label>Sign up with</ion-label>
+      </div>
+      <div class="login-icons-container">
+        <img src="/assets/icon/facebook.png" alt="fb icon" class="icon">
+        <img src="/assets/icon/google.png" alt="google icon" class="icon">
+        <img src="/assets/icon/apple.png" alt="apple icon" class="icon">
+      </div>
+      <div class="sign-up-text">
+        <ion-label>
+          Not a Member? <a [routerLink]="['/signup']">Sign Up</a>
+        </ion-label>
+      </div>
+
+
+    </div>
+  </div>
+</ion-content>

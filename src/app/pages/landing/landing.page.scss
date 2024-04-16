@@ -1,0 +1,52 @@
+ion-content {
+    --background: linear-gradient(0deg,rgba(97, 97, 97, 0.589), rgba(0,0,0,0.1)), url("/assets/landingBg.png") no-repeat center center / cover;
+  }
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin-top: 100px;
+  }
+
+  .image-class {
+    width: 65%;
+  }
+
+  .email-button-color{
+    --background: #884A39;
+  }
+  .facebook-button-color{
+    --background: #003579;
+  }
+  .google-button-color{
+    --background: #884A39;
+  }
+
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 400px;
+  }
+  
+  .login-options {
+    width: 100%;
+    max-width: 300px; /* Optional: Adjust the maximum width as needed */
+  }
+  
+  .or-divider {
+    margin: 10px 0;
+    text-align: center;
+    line-height: 0.1em;
+    margin-bottom: 10px;
+  }
+  
+  .or-divider ion-label {
+
+    padding: 0 10px;
+    color: #888;
+  }
+  

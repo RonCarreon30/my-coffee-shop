@@ -1,0 +1,60 @@
+<ion-header translucent>
+  <ion-toolbar class="transparent-toolbar">
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/login']">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="verifying-code" [fullscreen]="true" *ngIf="showVerifyingCodeContent">
+  <div class="greeting-container">
+    <h1>FIND YOUR ACCOUNT</h1>
+  </div>
+
+  <div class="inputfield">
+    <ion-input type="number" maxlength="1" class="input"></ion-input>
+    <ion-input type="number" maxlength="1" class="input"></ion-input>
+    <ion-input type="number" maxlength="1" class="input"></ion-input>
+    <ion-input type="number" maxlength="1" class="input"></ion-input>
+  </div>
+
+  <div class="resend-timer">
+    <p id="resendLink" (click)="resendCode()" [class.disabled]="resendDisabled">
+      Resend in {{ formatTime(timer) }}
+    </p>
+  </div>
+  
+  <div class="bttn-container">
+    <ion-button expand="block" (click)="verifyCode()">Next</ion-button>
+    <ion-button expand="block" fill="outline" [disabled]="timer > 0" (click)="resendCode()">Resend</ion-button>
+  </div>
+</ion-content>
+
+<!--Show this after verifying code-->
+<ion-content id="set-pass" [fullscreen]="true" *ngIf="showSetPassContent">
+  <div class="greeting-container">
+    <h1>CREATE NEW PASSWORD</h1>
+    <p>Your new password must be different from the</p>
+    <p>previous used password</p>
+  </div>
+
+  <div class="new-pw-container">
+    <div class="new-pass">
+      <div class="custom-input">
+        <ion-input fill="outline" type="email" placeholder="Password" id="passoword"></ion-input>  
+      </div>
+      <div class="custom-input">
+        <ion-input fill="outline" type="password" placeholder="Confirm Password" id="confirm-password"></ion-input>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bttn-container">
+    <ion-button expand="block" (click)="resetPass()">Login</ion-button>
+  </div>
+</ion-content>
+

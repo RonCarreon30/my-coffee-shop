@@ -1,0 +1,80 @@
+ion-content {
+    --background: linear-gradient(0deg,rgba(97, 97, 97, 0.589), rgba(0,0,0,0.1)), url("/assets/landingBg.png") no-repeat center center / cover;
+  }
+
+  .greeting-container {
+    text-align: center;
+    margin-top: 30%;
+    position: fixed;
+    width: 100%;
+  }
+  @font-face {
+    font-family: 'DarkerGrotesque';
+    src: url('/assets/fonts/webfont/DarkerGrotesque-Bold.woff') format('woff');
+  }
+  
+  .greeting-container h1{
+    font-family: 'DarkerGrotesque';
+    font-size: xx-large;
+    margin: 0;
+    padding: 0;
+  }
+
+.inputfield {
+    width: 80%;
+    margin: 115% 0% 10% 10%;
+    display: flex;
+    justify-content: space-around;
+
+  }
+  .input {
+    height: 3em;
+    width: 2.5em;
+    border: 2px solid #ced4da;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 0.3em;
+    /*Hide number field arrows*/
+  }
+
+  .resend-timer {
+    margin-top: 20px;
+    text-align: center;
+    line-height: 0.1em;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .resend-timer a{
+    padding: 0 10px;
+    color: #FFFFFF;
+  }
+
+  .bttn-container{
+    width: 80%;
+    margin: 20% 0% 10% 10%;
+  }
+
+  .bttn-container ion-button{
+    margin: 5% 0 0 0;
+  }
+
+  .new-pw-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 500px;
+  }
+  
+  .new-pass {
+    width: 100%;
+    max-width: 350px; /* Optional: Adjust the maximum width as needed */
+  }
+
+  .ios .custom-input {
+    border: 2px solid #ced4da; /* or any color you prefer */
+    border-radius: 10px; /* optional: add border radius */
+    margin-top: 5%;
+    padding: 7px;
+  }

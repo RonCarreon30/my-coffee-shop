@@ -1,0 +1,125 @@
+<ion-header translucent>
+  <ion-toolbar class="transparent-toolbar">
+    <!-- Back button -->
+    <ion-buttons slot="start">
+      <ion-button [routerLink]="['/login']">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-margin" [fullscreen]="true">
+  <!-- Logo -->
+  <div class="logo">
+    <img class="image-class" src="/assets/logo.png"/>
+  </div>
+
+    <div class="progress-container">
+      <div class="progress-step" [ngClass]="{'active': currentStep >= 1}">
+        1
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step" [ngClass]="{'active': currentStep >= 2}">
+        2
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step" [ngClass]="{'active': currentStep >= 3}">
+        3
+      </div>
+    </div>
+
+      <!-- Step 1 Form -->
+  <div *ngIf="currentStep === 1">
+    <div class="input-container">
+      <div class="inputs">
+        <div class="custom-input">
+          <ion-input fill="outline" type="tel" placeholder="Contact Number" id="contactNumInput"></ion-input>  
+        </div>
+        <div class="custom-input">
+          <ion-input fill="outline" type="email" placeholder="Email"></ion-input>  
+        </div>
+        <div class="custom-input">
+          <ion-input fill="outline" type="password" placeholder="Password"></ion-input>
+        </div>
+        <div class="custom-input">
+          <ion-input fill="outline" type="password" placeholder="Confirm Password"></ion-input>
+        </div>
+
+        <div class="signup-page-bttn">
+          <ion-button expand="block" (click)="nextStep()">Next</ion-button>
+        </div>
+        <div class="signup-page-text">
+          <ion-label>
+            Already have an Account? <a [routerLink]="['/login']">Login</a>
+          </ion-label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2 Form -->
+  <div *ngIf="currentStep === 2">
+    <div class="custom-segment">
+      <div class="user-type-buttons">
+        <button class="user-type-button" [ngClass]="{'selected': userType === 'customer'}" (click)="selectUserType('customer')">Customer</button>
+        <button class="user-type-button" [ngClass]="{'selected': userType === 'rider'}" (click)="selectUserType('rider')">Rider</button>
+        <button class="user-type-button" [ngClass]="{'selected': userType === 'admin'}" (click)="selectUserType('admin')">Admin</button>
+      </div>
+    </div>
+    <div class="input-container">
+      <div class="inputs">
+        <div class="custom-input">
+          <ion-input fill="outline" type="text"  placeholder="Username"></ion-input>
+        </div>
+        <ion-row>
+          <ion-col class="col1">
+            <div class="custom-input">
+              <ion-input fill="outline" type="text"  placeholder="First Name"></ion-input>
+            </div>
+          </ion-col>
+          <ion-col class="col2">
+            <div class="custom-input">
+              <ion-input fill="outline" type="text" placeholder="Last Name"></ion-input>
+            </div>
+          </ion-col>
+        </ion-row>
+        <div class="custom-input">
+          <ion-input fill="outline" type="text" placeholder="Address"></ion-input>
+        </div>
+        <div class="signup-page-bttn">
+          <ion-button expand="block" (click)="nextStep()">Next</ion-button>
+        </div>
+        <div class="signup-page-text">
+          <ion-label>
+            Already have an Account? <a [routerLink]="['/login']">Login</a>
+          </ion-label>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <!-- Step 3 Form -->
+  <div *ngIf="currentStep === 3">
+    <div class="input-container">
+      <div class="inputs">
+          <!-- Check Image -->
+        <div *ngIf="showCheck" class="check-image">
+          <img src="/assets/check.gif" alt="check gif">
+        </div>
+
+        <div>
+          Implement a CAPTCHA here.
+        </div>
+
+        <div class="signup-page-bttn">
+          <ion-button expand="block" (click)="showCheckImage()">Next</ion-button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </ion-content>
+  
